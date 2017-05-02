@@ -30,7 +30,7 @@
 
 #slider {
 	height: calc(100% - 121px);
-	border:1px solid #608a05;
+	border:1px solid #cc9f10;
 
 }
 #slider ul.slides,
@@ -100,13 +100,13 @@
     font-family: FontAwesome;
     font-size: 60px;
     content: "\f105";
-	color:#608a05;
+	color:#cc9f10;
 }
 .flex-direction-nav a.flex-prev:before {
     font-family: FontAwesome;
     font-size: 60px;
     content: "\f104";
-	color:#608a05;
+	color:#cc9f10;
 }
 
 #thumbnails:hover .flex-direction-nav .flex-prev,
