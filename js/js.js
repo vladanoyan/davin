@@ -226,8 +226,11 @@ $('#nav-icon3').click(function(){
     });
 /*chenge btn text*/
 
-    	$('.SeeMore2').click(function(){
-    	$('#equipment').toggleClass('flashOn flash')
+      $("#show").hide();
+    $(".SeeMore2").click(function(){
+        $("#hide").toggle();
+        $("#show").toggle();
+
     });
 
    /*__________Listing Model3 Functions Start_________*/
