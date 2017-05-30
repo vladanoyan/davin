@@ -20,8 +20,7 @@
     src: url('../fonts/OpenSans/OpenSans-Semibold.woff');
     font-weight:700;
     }
-    @font-face
-    {
+    @font-face    {
     font-family:"Open Sans Light";
     src:url("../fonts/OpenSans/OpenSans-Light.woff") format("woff");
     font-weight:300;
@@ -477,6 +476,10 @@
     .Coups_de_Coeur{
     font-size: 24px;
     }
+    .picturedNavbar .picturedNavbarItem .title
+    {
+        font-size: 43px;
+    }
     }
     @media (max-width: 420px) {
     .Coups_de_Coeur{
@@ -549,11 +552,10 @@
     transform: translateZ(0);
     padding: 10px;
     }
-
+    
     .Background {
     background: rgba(230,199,99,1);
     background: -moz-linear-gradient(left, rgba(230,199,99,1) 0%, rgba(230,199,99,1) 21%, rgba(194,159,52,1) 73%, rgba(194,159,52,1) 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(230,199,99,1)), color-stop(21%, rgba(230,199,99,1)), color-stop(73%, rgba(194,159,52,1)), color-stop(100%, rgba(194,159,52,1)));
     background: -webkit-linear-gradient(left, rgba(230,199,99,1) 0%, rgba(230,199,99,1) 21%, rgba(194,159,52,1) 73%, rgba(194,159,52,1) 100%);
     background: -o-linear-gradient(left, rgba(230,199,99,1) 0%, rgba(230,199,99,1) 21%, rgba(194,159,52,1) 73%, rgba(194,159,52,1) 100%);
     background: -ms-linear-gradient(left, rgba(230,199,99,1) 0%, rgba(230,199,99,1) 21%, rgba(194,159,52,1) 73%, rgba(194,159,52,1) 100%);
@@ -716,12 +718,14 @@
     {
     background-color: rgba(45, 52, 60, 0.051);
     }
-       body>footer.footer-m2 {
-    padding: 0;
-    }
+
     .footer-m2 p {
     margin: 0;
     padding: 0;
+    }
+    span#elem_foot_link a{
+        font-size: 14px;
+        color:#333;
     }
     /*--- Footer General Styles End ---*/
 
@@ -731,8 +735,6 @@
     width: 100%;
     height: auto;
     display: inline-block;
-    padding-left: 0;
-    padding-right: 0;
     min-width: 300px;
     vertical-align: top;
     }
@@ -847,10 +849,7 @@
 
     /*-------------------- Footer Model2 Colors Start --------------------*/
     /*--- Footer General Colors Start ---*/
-    body>footer.footer-m2 {
-    padding: 0;
 
-    }
     .footer-m2 .footer-top-links-bg {
     background-color: transparent;
     margin:0 auto;
@@ -865,7 +864,7 @@
     }
 
     .footer-m2 a {
-    color: #646464;
+    color: black;
     font-size: 18px;
     }
     /*--- Footer General Colors End ---*/
@@ -919,7 +918,7 @@
     -ms-transform: translateY(-50%);
     }
 
-
+}
     /*--- Footer Contacts-Partners Block Ends ---*/
 
     /*--- Footer Copyright Block Starts ---*/
@@ -930,9 +929,9 @@
     /*padding-left: 9px;*/
     /*padding-right: 18px;*/
 
-    /*}*/
+
     /*--- Footer Copyright Block Ends ---*/
-    }
+
     .phone{
     font-weight: 300;
     font-size: 15px;
@@ -1945,7 +1944,6 @@
     }
     }
     #agency>.section-bg>.col-sm-12{
-    padding:0;
     margin:0;
     }
     @media screen and (max-width:400px) {
@@ -2274,6 +2272,7 @@
     font-size: 1.5em;
     text-transform: capitalize;
     margin-top: 5px;
+    width: 100%;
     }
     .listing-details-m1 .lst-itm-dtl-header .lst-itm-dtl-header-txt2 {
     font-size: 11px;
@@ -2413,13 +2412,13 @@
     padding-bottom: 14px;
     }
 
-
+/*
     .listing-details-m1 .form-block input,
     .listing-details-m1 .form-block select,
     .listing-details-m1 .form-block textarea {
     width: 100%;
     }
-
+*/
     .listing-details-m1 .form-block textarea {
     height: 170px;
     }
@@ -2592,6 +2591,9 @@
     .listing-details-m1 .lst-itm-dtl-desc-header-txt span {
     font-size: 22px;
     }
+    .listing-details-m1 .lst-itm-dtl-header h3{
+        font-size: 19px;
+    }
     }
     @media (min-width: 1200px) {
     /* Listing Details Image Starts */
@@ -2708,7 +2710,7 @@
     content: "\f105";
     color :#000;
     position: absolute;
-    left: 50%;
+    left: 0;
     top: 50%;
     transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
@@ -3751,6 +3753,12 @@
     .fileUpload + label:hover i {
     opacity: 0.7;
     }
+    .uploadpos{
+    position: absolute;
+    left: 6px;
+    width: 94%;
+    }
+
     .fileUploadLabel {
     display: flex;
     align-items: center;
@@ -3759,9 +3767,10 @@
     }
     .fileUploadLabel i {
     position: relative;
+    z-index: 10;
     left: -12px;
     border-radius: 5px 0 0 5px;
-    padding: 8px 40px;
+    padding: 8px 39px;
     font-size: 18px;
     color: #FFF;
     background-color: #c0950b;
@@ -3944,6 +3953,11 @@
     {
     z-index: 99999;
     }
+    
+    .modal-body{
+      text-align: center;
+    }
+
     /* Modal Close Icon */
     .popup-contact-m2 button.modal-close {
     display: inline-block;
@@ -4137,12 +4151,7 @@
 }
 
 }
-@media screen and (max-width:350px) {
-    .agency-m8
-    {
-      padding:0;
-    }
-}
+
 .modal-dialog
     {
     max-width: 900px;
