@@ -162,7 +162,7 @@
     }
 
     .navbar .navbar-collapse {
-    text-align:right;
+    text-align:center;
     }
     .navbar-collapse>a{
     position: relative;
@@ -214,6 +214,8 @@
     .dropdown-menu
     {
     padding:0 0;
+     max-height: 300px;
+    overflow-y: auto;
 
     }
     .navbar-inverse
@@ -255,6 +257,7 @@
     .navbar-inverse .navbar-nav>li>a {
     font-size: 11px;
     }
+   
     .mainheader>a>img
     {
     width: 80%;
@@ -321,7 +324,7 @@
     min-height: 50px !important;
     }
     .navbar-inverse .navbar-nav>li>a {
-    font-size: 12px;
+    font-size: 14px;
     color: black;
     }
     .logo {
@@ -388,7 +391,7 @@
     .content
     {
     width: 100%;
-    padding: 50px 0;
+    padding: 5px 0;
     }
 
     a:hover, a:focus {
@@ -422,11 +425,13 @@
     position: absolute;
     color: #fff;
     bottom: 0;
-    margin: 0;
     transition: all 0.6s;
     font-size: 50px;
     font-weight: 300;
     font-family: "Roboto Light";
+    margin: 0 auto;
+    left: 50%;
+    transform: translate(-50%,-50%);
 
     }
     .picturedNavbarItem:hover .title{
@@ -442,10 +447,7 @@
         padding: 10px 5px;
     }
     .picturedNavbarItem>a{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+   
     }
     @media (min-width: 1010px) {
         .title {
@@ -690,14 +692,16 @@
     line-height: 23px;
     }
     @media (max-width: 990px) {
-
-
     .Parce
-
     {
     font-size: 14px;
     padding-top: 15px;
     padding-bottom: 15px;
+    }
+    }
+ @media (max-width:1004px) {
+    .footer-m2 .footer-top-links li a {
+    font-size: 10px!important;
     }
     }
 
@@ -1538,7 +1542,10 @@
     color: #fff;
     background: rgba(6, 6, 6, 0.35);
     height: 100%;
-        transition: all 6s;
+    transition: all 6s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     }
     .lst-img-caption-btm-btns h2 {
     padding: 7px;
@@ -2270,7 +2277,6 @@
     }
     .listing-details-m1 .lst-itm-dtl-header h3 {
     font-size: 1.5em;
-    text-transform: capitalize;
     margin-top: 5px;
     width: 100%;
     }
@@ -3637,7 +3643,7 @@
     width: 171px;
     height: 40px;
     line-height: 28px;
-    margin-top: 20px;
+    margin: 20px 0;
     }
     .marg-right5
     {
@@ -3676,7 +3682,7 @@
     margin-bottom: 10px;
     }
     form .formSectionTitle {
-
+    text-align: center;
     margin:25px 0;
     position: relative;
     float: left;
@@ -3705,6 +3711,7 @@
     .formSectionTitleArea .sectionTitle {
     margin: 0;
     text-transform: uppercase;
+    text-align: center;
 
     }
     .formSectionSubTitle {
@@ -4450,6 +4457,12 @@
     -ms-border-radius: 25px 0 0 25px;
 
     }
+     @media(max-width: 470px){
+    .form-input-group-m1,.textmodal{
+        padding: 0
+    }
+    }
+    
     /*override*/
     .form-xlg .form-input-group-m1 .form-input-addon label {
     height: auto;
